@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace COMP1004_RAILL_ASSIGNMENT2
 {
-    public partial class Form1 : Form
+    public partial class SharpAutoForm : Form
     {
-        public Form1()
+        public SharpAutoForm()
         {
             InitializeComponent();
         }
