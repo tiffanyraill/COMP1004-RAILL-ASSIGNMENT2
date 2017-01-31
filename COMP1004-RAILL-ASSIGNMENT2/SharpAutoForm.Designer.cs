@@ -137,7 +137,6 @@
             this.customizedDetailingRadioButton.Name = "customizedDetailingRadioButton";
             this.customizedDetailingRadioButton.Size = new System.Drawing.Size(213, 33);
             this.customizedDetailingRadioButton.TabIndex = 2;
-            this.customizedDetailingRadioButton.TabStop = true;
             this.customizedDetailingRadioButton.Text = "Customized Detailing";
             this.customizedDetailingRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -149,13 +148,13 @@
             this.pearlizedRadioButton.Name = "pearlizedRadioButton";
             this.pearlizedRadioButton.Size = new System.Drawing.Size(111, 33);
             this.pearlizedRadioButton.TabIndex = 1;
-            this.pearlizedRadioButton.TabStop = true;
             this.pearlizedRadioButton.Text = "Pearlized";
             this.pearlizedRadioButton.UseVisualStyleBackColor = true;
             // 
             // standardRadioButton
             // 
             this.standardRadioButton.AutoSize = true;
+            this.standardRadioButton.Checked = true;
             this.standardRadioButton.Location = new System.Drawing.Point(22, 55);
             this.standardRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.standardRadioButton.Name = "standardRadioButton";
@@ -205,8 +204,10 @@
             this.textBox1.Location = new System.Drawing.Point(270, 222);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(168, 31);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox2
             // 
@@ -214,8 +215,10 @@
             this.textBox2.Location = new System.Drawing.Point(270, 486);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(168, 31);
             this.textBox2.TabIndex = 6;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox3
             // 
@@ -225,6 +228,8 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(168, 31);
             this.textBox3.TabIndex = 7;
+            this.textBox3.Text = "0.00";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // basePriceTextBox
             // 
@@ -243,8 +248,10 @@
             this.textBox5.Location = new System.Drawing.Point(270, 158);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(168, 31);
             this.textBox5.TabIndex = 9;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox6
             // 
@@ -252,8 +259,10 @@
             this.textBox6.Location = new System.Drawing.Point(270, 355);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(168, 31);
             this.textBox6.TabIndex = 10;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox7
             // 
@@ -261,8 +270,10 @@
             this.textBox7.Location = new System.Drawing.Point(270, 289);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(168, 31);
             this.textBox7.TabIndex = 11;
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // basePriceLabel
             // 
@@ -313,7 +324,7 @@
             this.salesTaxLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.salesTaxLabel.Size = new System.Drawing.Size(158, 31);
             this.salesTaxLabel.TabIndex = 15;
-            this.salesTaxLabel.Text = "Sales Tax (14%):";
+            this.salesTaxLabel.Text = "Sales Tax (13%):";
             this.salesTaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // totalLabel
@@ -476,6 +487,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SharpAutoForm";
             this.Text = "Sharp Auto Form";
+            this.Load += new System.EventHandler(this.SharpAutoForm_Load);
             this.additionalItemsGroupBox.ResumeLayout(false);
             this.additionalItemsGroupBox.PerformLayout();
             this.exteriorFinishGroupBox.ResumeLayout(false);
