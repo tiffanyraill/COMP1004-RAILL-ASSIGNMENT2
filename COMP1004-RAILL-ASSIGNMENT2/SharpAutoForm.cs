@@ -47,10 +47,41 @@ namespace COMP1004_RAILL_ASSIGNMENT2
             MessageBox.Show("This program calculates the amount due on a New or Used Vehicle");
         }
 
-        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+
+        //font method gathered from https://msdn.microsoft.com/en-us/library/system.windows.forms.fontdialog.apply(v=vs.110).aspx 
+        //it stores the old font and based on the user's selection, changes the font in the given textboxes
+        private void fontToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             fontDialog1.ShowDialog();
+            fontDialog1.Apply += new System.EventHandler(fontDialog1_Apply);
+
+            System.Drawing.Font oldFont = this.Font;
+            DialogResult result = fontDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                fontDialog1_Apply(this.amountDueTextBox, new System.EventArgs());
+            }
+            // If Cancel is clicked, set the font back to
+            // the original font.
+            else if (result == DialogResult.Cancel)
+            {
+                this.Font = oldFont;
+                foreach (Control containedControl in this.Controls)
+                {
+                    containedControl.Font = oldFont;
+                }
+            }
         }
+            private void fontDialog1_Apply(object sender, System.EventArgs e)
+        {
+
+            this.Font = fontDialog1.Font;
+            foreach (Control containedControl in this.Controls)
+            {
+                containedControl.Font = fontDialog1.Font;
+            }
+        }
+    
 
         //exit button- exits application
         private void exitButton_Click(object sender, EventArgs e)
