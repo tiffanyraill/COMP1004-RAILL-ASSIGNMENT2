@@ -32,17 +32,19 @@ namespace COMP1004_RAILL_ASSIGNMENT2
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // STEP 1: Create a new form
-            AboutForm aboutform = new AboutForm();
-
+            AboutForm aboutForm = new AboutForm();
             //STEP 2: Show the about form with ShowDialogue (a modal method that displays the form)
-            aboutform.ShowDialog();
+           aboutForm.ShowDialog();
+            //the aboutform is not working, reverting to messageBox.
+            MessageBox.Show("This program calculates the amount due on a New or Used Vehicle");
         }
 
         private void fontToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fontDialog1.ShowDialog();
         }
 
+        //exit button- exits application
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -70,6 +72,18 @@ namespace COMP1004_RAILL_ASSIGNMENT2
             standardRadioButton.Checked = true;
             pearlizedRadioButton.Checked = false;
             customizedDetailingRadioButton.Checked = false;
+        }
+
+        //exit menu button - exits application
+        private void exitMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //clear menu button - calls to "clear button" method and clears form
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clearButton.PerformClick();
         }
     }
 }

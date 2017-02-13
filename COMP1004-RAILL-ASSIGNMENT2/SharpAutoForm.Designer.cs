@@ -398,8 +398,9 @@
             // 
             this.exitMenuItem.Name = "exitMenuItem";
             this.exitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
-            this.exitMenuItem.Size = new System.Drawing.Size(181, 30);
+            this.exitMenuItem.Size = new System.Drawing.Size(211, 30);
             this.exitMenuItem.Text = "E&xit";
+            this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -428,6 +429,7 @@
             this.clearToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
             this.clearToolStripMenuItem.Text = "C&lear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // fontToolStripMenuItem
             // 
@@ -458,7 +460,7 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
             this.aboutToolStripMenuItem.Text = "&About";
             // 
             // fontDialog1
@@ -495,6 +497,7 @@
             this.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "SharpAutoForm";
             this.Text = "Sharp Auto Form";
             this.Load += new System.EventHandler(this.SharpAutoForm_Load);

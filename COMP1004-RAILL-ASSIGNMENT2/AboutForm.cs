@@ -7,6 +7,10 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+///@SharpAutoForm Assignment 2  COMP1004-02-w2017
+///@Tiffany Raill
+///@200264388
+///App Creation Date: 1/30/2017
 namespace COMP1004_RAILL_ASSIGNMENT2
 {
     partial class AboutForm : Form
@@ -101,5 +105,10 @@ namespace COMP1004_RAILL_ASSIGNMENT2
             }
         }
         #endregion
+        //closes the "about form
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
