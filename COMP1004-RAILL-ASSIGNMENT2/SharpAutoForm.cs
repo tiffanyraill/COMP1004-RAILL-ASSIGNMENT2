@@ -28,5 +28,48 @@ namespace COMP1004_RAILL_ASSIGNMENT2
         {
 
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // STEP 1: Create a new form
+            AboutForm aboutform = new AboutForm();
+
+            //STEP 2: Show the about form with ShowDialogue (a modal method that displays the form)
+            aboutform.ShowDialog();
+        }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // When the Clear Button is clicked, all the Text Boxes and Check Boxes of the form are cleared.
+        //The Radio Button in the Exterior Finish Group box is set to Standard as a default. 
+        //Have the Trade- in Allowance Text Box default to zero
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            double tradeInAllowance = 0.00;
+            tradeInAllowanceTextBox.Text = tradeInAllowance.ToString("C2");
+
+            basePriceTextBox.Text = "";
+            additionalOptionsLabel.Text = "";
+            subtotalTextBox.Text = "";
+            salesTaxTextBox.Text = "";
+            totalTextBox.Text = "";
+            amountDueTextBox.Text = "";
+
+            stereoSystemCheckBox.Checked = false;
+            leatherInteriorCheckBox.Checked = false;
+            computerNavigationCheckBox.Checked = false;
+
+            standardRadioButton.Checked = true;
+            pearlizedRadioButton.Checked = false;
+            customizedDetailingRadioButton.Checked = false;
+        }
     }
 }

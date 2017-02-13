@@ -39,13 +39,13 @@
             this.calculateButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.subtotalTextBox = new System.Windows.Forms.TextBox();
+            this.amountDueTextBox = new System.Windows.Forms.TextBox();
+            this.tradeInAllowanceTextBox = new System.Windows.Forms.TextBox();
             this.basePriceTextBox = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.additionalOptionsTextBox = new System.Windows.Forms.TextBox();
+            this.totalTextBox = new System.Windows.Forms.TextBox();
+            this.salesTaxTextBox = new System.Windows.Forms.TextBox();
             this.basePriceLabel = new System.Windows.Forms.Label();
             this.additionalOptionsLabel = new System.Windows.Forms.Label();
             this.subtotalLabel = new System.Windows.Forms.Label();
@@ -63,6 +63,7 @@
             this.colourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.additionalItemsGroupBox.SuspendLayout();
             this.exteriorFinishGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -74,9 +75,9 @@
             this.additionalItemsGroupBox.Controls.Add(this.leatherInteriorCheckBox);
             this.additionalItemsGroupBox.Controls.Add(this.stereoSystemCheckBox);
             this.additionalItemsGroupBox.Location = new System.Drawing.Point(485, 71);
-            this.additionalItemsGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.additionalItemsGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.additionalItemsGroupBox.Name = "additionalItemsGroupBox";
-            this.additionalItemsGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.additionalItemsGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.additionalItemsGroupBox.Size = new System.Drawing.Size(284, 244);
             this.additionalItemsGroupBox.TabIndex = 0;
             this.additionalItemsGroupBox.TabStop = false;
@@ -86,7 +87,7 @@
             // 
             this.computerNavigationCheckBox.AutoSize = true;
             this.computerNavigationCheckBox.Location = new System.Drawing.Point(22, 183);
-            this.computerNavigationCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.computerNavigationCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.computerNavigationCheckBox.Name = "computerNavigationCheckBox";
             this.computerNavigationCheckBox.Size = new System.Drawing.Size(218, 33);
             this.computerNavigationCheckBox.TabIndex = 2;
@@ -97,7 +98,7 @@
             // 
             this.leatherInteriorCheckBox.AutoSize = true;
             this.leatherInteriorCheckBox.Location = new System.Drawing.Point(22, 122);
-            this.leatherInteriorCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.leatherInteriorCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.leatherInteriorCheckBox.Name = "leatherInteriorCheckBox";
             this.leatherInteriorCheckBox.Size = new System.Drawing.Size(172, 33);
             this.leatherInteriorCheckBox.TabIndex = 1;
@@ -108,7 +109,7 @@
             // 
             this.stereoSystemCheckBox.AutoSize = true;
             this.stereoSystemCheckBox.Location = new System.Drawing.Point(22, 58);
-            this.stereoSystemCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stereoSystemCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.stereoSystemCheckBox.Name = "stereoSystemCheckBox";
             this.stereoSystemCheckBox.Size = new System.Drawing.Size(158, 33);
             this.stereoSystemCheckBox.TabIndex = 0;
@@ -121,9 +122,9 @@
             this.exteriorFinishGroupBox.Controls.Add(this.pearlizedRadioButton);
             this.exteriorFinishGroupBox.Controls.Add(this.standardRadioButton);
             this.exteriorFinishGroupBox.Location = new System.Drawing.Point(485, 378);
-            this.exteriorFinishGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exteriorFinishGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.exteriorFinishGroupBox.Name = "exteriorFinishGroupBox";
-            this.exteriorFinishGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exteriorFinishGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.exteriorFinishGroupBox.Size = new System.Drawing.Size(284, 241);
             this.exteriorFinishGroupBox.TabIndex = 1;
             this.exteriorFinishGroupBox.TabStop = false;
@@ -133,7 +134,7 @@
             // 
             this.customizedDetailingRadioButton.AutoSize = true;
             this.customizedDetailingRadioButton.Location = new System.Drawing.Point(22, 170);
-            this.customizedDetailingRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.customizedDetailingRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.customizedDetailingRadioButton.Name = "customizedDetailingRadioButton";
             this.customizedDetailingRadioButton.Size = new System.Drawing.Size(213, 33);
             this.customizedDetailingRadioButton.TabIndex = 2;
@@ -144,7 +145,7 @@
             // 
             this.pearlizedRadioButton.AutoSize = true;
             this.pearlizedRadioButton.Location = new System.Drawing.Point(22, 112);
-            this.pearlizedRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pearlizedRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.pearlizedRadioButton.Name = "pearlizedRadioButton";
             this.pearlizedRadioButton.Size = new System.Drawing.Size(111, 33);
             this.pearlizedRadioButton.TabIndex = 1;
@@ -156,7 +157,7 @@
             this.standardRadioButton.AutoSize = true;
             this.standardRadioButton.Checked = true;
             this.standardRadioButton.Location = new System.Drawing.Point(22, 55);
-            this.standardRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.standardRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.standardRadioButton.Name = "standardRadioButton";
             this.standardRadioButton.Size = new System.Drawing.Size(110, 33);
             this.standardRadioButton.TabIndex = 0;
@@ -169,7 +170,7 @@
             // 
             this.calculateButton.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateButton.Location = new System.Drawing.Point(29, 672);
-            this.calculateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.calculateButton.Margin = new System.Windows.Forms.Padding(4);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(141, 65);
             this.calculateButton.TabIndex = 2;
@@ -180,100 +181,102 @@
             // 
             this.clearButton.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.Location = new System.Drawing.Point(336, 672);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(4);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(141, 65);
             this.clearButton.TabIndex = 3;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.Location = new System.Drawing.Point(628, 672);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(141, 65);
             this.exitButton.TabIndex = 4;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // textBox1
+            // subtotalTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(270, 222);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(168, 31);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.subtotalTextBox.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtotalTextBox.Location = new System.Drawing.Point(270, 222);
+            this.subtotalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.subtotalTextBox.Name = "subtotalTextBox";
+            this.subtotalTextBox.ReadOnly = true;
+            this.subtotalTextBox.Size = new System.Drawing.Size(168, 31);
+            this.subtotalTextBox.TabIndex = 5;
+            this.subtotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox2
+            // amountDueTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(270, 486);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(168, 31);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.amountDueTextBox.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amountDueTextBox.Location = new System.Drawing.Point(270, 486);
+            this.amountDueTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.amountDueTextBox.Name = "amountDueTextBox";
+            this.amountDueTextBox.ReadOnly = true;
+            this.amountDueTextBox.Size = new System.Drawing.Size(168, 31);
+            this.amountDueTextBox.TabIndex = 6;
+            this.amountDueTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox3
+            // tradeInAllowanceTextBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(270, 419);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(168, 31);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "0.00";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tradeInAllowanceTextBox.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tradeInAllowanceTextBox.Location = new System.Drawing.Point(270, 419);
+            this.tradeInAllowanceTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.tradeInAllowanceTextBox.Name = "tradeInAllowanceTextBox";
+            this.tradeInAllowanceTextBox.Size = new System.Drawing.Size(168, 31);
+            this.tradeInAllowanceTextBox.TabIndex = 7;
+            this.tradeInAllowanceTextBox.Text = "0.00";
+            this.tradeInAllowanceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // basePriceTextBox
             // 
             this.basePriceTextBox.AcceptsTab = true;
             this.basePriceTextBox.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.basePriceTextBox.Location = new System.Drawing.Point(270, 92);
-            this.basePriceTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.basePriceTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.basePriceTextBox.Name = "basePriceTextBox";
             this.basePriceTextBox.Size = new System.Drawing.Size(168, 31);
             this.basePriceTextBox.TabIndex = 8;
             this.basePriceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox5
+            // additionalOptionsTextBox
             // 
-            this.textBox5.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(270, 158);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(168, 31);
-            this.textBox5.TabIndex = 9;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.additionalOptionsTextBox.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.additionalOptionsTextBox.Location = new System.Drawing.Point(270, 158);
+            this.additionalOptionsTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.additionalOptionsTextBox.Name = "additionalOptionsTextBox";
+            this.additionalOptionsTextBox.ReadOnly = true;
+            this.additionalOptionsTextBox.Size = new System.Drawing.Size(168, 31);
+            this.additionalOptionsTextBox.TabIndex = 9;
+            this.additionalOptionsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox6
+            // totalTextBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(270, 355);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(168, 31);
-            this.textBox6.TabIndex = 10;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.totalTextBox.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalTextBox.Location = new System.Drawing.Point(270, 355);
+            this.totalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.totalTextBox.Name = "totalTextBox";
+            this.totalTextBox.ReadOnly = true;
+            this.totalTextBox.Size = new System.Drawing.Size(168, 31);
+            this.totalTextBox.TabIndex = 10;
+            this.totalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox7
+            // salesTaxTextBox
             // 
-            this.textBox7.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(270, 289);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(168, 31);
-            this.textBox7.TabIndex = 11;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.salesTaxTextBox.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesTaxTextBox.Location = new System.Drawing.Point(270, 289);
+            this.salesTaxTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.salesTaxTextBox.Name = "salesTaxTextBox";
+            this.salesTaxTextBox.ReadOnly = true;
+            this.salesTaxTextBox.Size = new System.Drawing.Size(168, 31);
+            this.salesTaxTextBox.TabIndex = 11;
+            this.salesTaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // basePriceLabel
             // 
@@ -395,7 +398,7 @@
             // 
             this.exitMenuItem.Name = "exitMenuItem";
             this.exitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
-            this.exitMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.exitMenuItem.Size = new System.Drawing.Size(181, 30);
             this.exitMenuItem.Text = "E&xit";
             // 
             // editToolStripMenuItem
@@ -432,6 +435,7 @@
             this.fontToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             this.fontToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
             this.fontToolStripMenuItem.Text = "&Font";
+            this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
             // colourToolStripMenuItem
             // 
@@ -454,8 +458,14 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
             this.aboutToolStripMenuItem.Text = "&About";
+            // 
+            // fontDialog1
+            // 
+            this.fontDialog1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.fontDialog1.MaxSize = 12;
+            this.fontDialog1.MinSize = 10;
             // 
             // SharpAutoForm
             // 
@@ -469,13 +479,13 @@
             this.Controls.Add(this.subtotalLabel);
             this.Controls.Add(this.additionalOptionsLabel);
             this.Controls.Add(this.basePriceLabel);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.salesTaxTextBox);
+            this.Controls.Add(this.totalTextBox);
+            this.Controls.Add(this.additionalOptionsTextBox);
             this.Controls.Add(this.basePriceTextBox);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tradeInAllowanceTextBox);
+            this.Controls.Add(this.amountDueTextBox);
+            this.Controls.Add(this.subtotalTextBox);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.calculateButton);
@@ -484,7 +494,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SharpAutoForm";
             this.Text = "Sharp Auto Form";
             this.Load += new System.EventHandler(this.SharpAutoForm_Load);
@@ -512,13 +522,13 @@
         private System.Windows.Forms.Button calculateButton;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox subtotalTextBox;
+        private System.Windows.Forms.TextBox amountDueTextBox;
+        private System.Windows.Forms.TextBox tradeInAllowanceTextBox;
         private System.Windows.Forms.TextBox basePriceTextBox;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox additionalOptionsTextBox;
+        private System.Windows.Forms.TextBox totalTextBox;
+        private System.Windows.Forms.TextBox salesTaxTextBox;
         private System.Windows.Forms.Label basePriceLabel;
         private System.Windows.Forms.Label additionalOptionsLabel;
         private System.Windows.Forms.Label subtotalLabel;
@@ -536,6 +546,7 @@
         private System.Windows.Forms.ToolStripMenuItem colourToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
 
