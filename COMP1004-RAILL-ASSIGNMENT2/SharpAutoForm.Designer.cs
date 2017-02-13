@@ -93,6 +93,7 @@
             this.computerNavigationCheckBox.TabIndex = 2;
             this.computerNavigationCheckBox.Text = "Computer Navigation";
             this.computerNavigationCheckBox.UseVisualStyleBackColor = true;
+            this.computerNavigationCheckBox.CheckedChanged += new System.EventHandler(this.computerNavigationCheckBox_CheckedChanged);
             // 
             // leatherInteriorCheckBox
             // 
@@ -104,6 +105,7 @@
             this.leatherInteriorCheckBox.TabIndex = 1;
             this.leatherInteriorCheckBox.Text = "Leather Interior";
             this.leatherInteriorCheckBox.UseVisualStyleBackColor = true;
+            this.leatherInteriorCheckBox.CheckedChanged += new System.EventHandler(this.leatherInteriorCheckBox_CheckedChanged);
             // 
             // stereoSystemCheckBox
             // 
@@ -115,6 +117,7 @@
             this.stereoSystemCheckBox.TabIndex = 0;
             this.stereoSystemCheckBox.Text = "Stereo System";
             this.stereoSystemCheckBox.UseVisualStyleBackColor = true;
+            this.stereoSystemCheckBox.CheckedChanged += new System.EventHandler(this.stereoSystemCheckBox_CheckedChanged);
             // 
             // exteriorFinishGroupBox
             // 
@@ -140,6 +143,7 @@
             this.customizedDetailingRadioButton.TabIndex = 2;
             this.customizedDetailingRadioButton.Text = "Customized Detailing";
             this.customizedDetailingRadioButton.UseVisualStyleBackColor = true;
+            this.customizedDetailingRadioButton.CheckedChanged += new System.EventHandler(this.customizedDetailingRadioButton_CheckedChanged);
             // 
             // pearlizedRadioButton
             // 
@@ -151,6 +155,7 @@
             this.pearlizedRadioButton.TabIndex = 1;
             this.pearlizedRadioButton.Text = "Pearlized";
             this.pearlizedRadioButton.UseVisualStyleBackColor = true;
+            this.pearlizedRadioButton.CheckedChanged += new System.EventHandler(this.pearlizedRadioButton_CheckedChanged);
             // 
             // standardRadioButton
             // 
@@ -165,6 +170,7 @@
             this.standardRadioButton.Text = "Standard";
             this.standardRadioButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.standardRadioButton.UseVisualStyleBackColor = true;
+            this.standardRadioButton.CheckedChanged += new System.EventHandler(this.standardRadioButton_CheckedChanged);
             // 
             // calculateButton
             // 
@@ -176,6 +182,7 @@
             this.calculateButton.TabIndex = 2;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // clearButton
             // 
@@ -468,6 +475,7 @@
             this.fontDialog1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.fontDialog1.MaxSize = 12;
             this.fontDialog1.MinSize = 10;
+            this.fontDialog1.ShowColor = true;
             // 
             // SharpAutoForm
             // 

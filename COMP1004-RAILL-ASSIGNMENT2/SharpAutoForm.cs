@@ -19,6 +19,14 @@ namespace COMP1004_RAILL_ASSIGNMENT2
 {
     public partial class SharpAutoForm : Form
     {
+        double standardOption = 0.00;
+        double stereoSystemCost = 425.76;
+        double leatherInteriorCost = 987.41;
+        double computerNavigationCost = 1741.23;
+        double pearlizedOption = 345.72;
+        double customizedOption = 599.99;
+        double totalAdditionalCharges;
+
         public SharpAutoForm()
         {
             InitializeComponent();
@@ -34,7 +42,7 @@ namespace COMP1004_RAILL_ASSIGNMENT2
             // STEP 1: Create a new form
             AboutForm aboutForm = new AboutForm();
             //STEP 2: Show the about form with ShowDialogue (a modal method that displays the form)
-           aboutForm.ShowDialog();
+            aboutForm.ShowDialog();
             //the aboutform is not working, reverting to messageBox.
             MessageBox.Show("This program calculates the amount due on a New or Used Vehicle");
         }
@@ -59,7 +67,7 @@ namespace COMP1004_RAILL_ASSIGNMENT2
             tradeInAllowanceTextBox.Text = tradeInAllowance.ToString("C2");
 
             basePriceTextBox.Text = "";
-            additionalOptionsLabel.Text = "";
+            additionalOptionsTextBox.Text = "";
             subtotalTextBox.Text = "";
             salesTaxTextBox.Text = "";
             totalTextBox.Text = "";
@@ -85,5 +93,138 @@ namespace COMP1004_RAILL_ASSIGNMENT2
         {
             clearButton.PerformClick();
         }
+
+        private void stereoSystemCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (stereoSystemCheckBox.Checked == true)
+            {
+               additionalOptionsTextBox.Text = stereoSystemCost.ToString("C2");
+             }
+                else if (stereoSystemCheckBox.Checked == false)
+                {
+                    additionalOptionsTextBox.Text = "";
+                }
+            }
+        
+        private void leatherInteriorCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (leatherInteriorCheckBox.Checked == true)
+            {
+                additionalOptionsTextBox.Text = leatherInteriorCost.ToString("C2");
+            }
+            else if (leatherInteriorCheckBox.Checked == false)
+            {
+                additionalOptionsTextBox.Text = "";
+            }
+        }
+
+        private void computerNavigationCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (computerNavigationCheckBox.Checked == true)
+            {
+                additionalOptionsTextBox.Text = computerNavigationCost.ToString("C2");
+            }
+            else if (computerNavigationCheckBox.Checked == false)
+            {
+                additionalOptionsTextBox.Text = "";
+            }
+        }
+        
+        private void pearlizedRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (pearlizedRadioButton.Checked == true)
+            {
+                additionalOptionsTextBox.Text = pearlizedOption.ToString("C2");
+            }
+        }
+
+        //customized detailing option - additional options + 599.99
+        private void customizedDetailingRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (customizedDetailingRadioButton.Checked == true)
+            {
+                additionalOptionsTextBox.Text = customizedOption.ToString("C2");
+            }
+        }
+
+        //if the standard option is chosen, no additional charges- message box displays message
+        private void standardRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (standardRadioButton.Checked == true)
+            {
+                additionalOptionsTextBox.Text = standardOption.ToString("C2");
+                MessageBox.Show("No Additional Charges for Standard Package");
+            }
+        }
+
+        private void additionalCharges()
+        {
+            if (pearlizedRadioButton.Checked == true)
+            {
+                totalAdditionalCharges += pearlizedOption;
+            }
+            if (customizedDetailingRadioButton.Checked == true)
+            {
+                totalAdditionalCharges += customizedOption;
+            }
+            if (stereoSystemCheckBox.Checked == true)
+            {
+                totalAdditionalCharges += stereoSystemCost;
+            }
+            if(computerNavigationCheckBox.Checked == true)
+            {
+                totalAdditionalCharges += computerNavigationCost;
+            }
+            if(leatherInteriorCheckBox.Checked == true)
+            {
+                totalAdditionalCharges += leatherInteriorCost;
+            }
+            additionalOptionsTextBox.Text = totalAdditionalCharges.ToString("C2");
+         }
+
+        //calculate the subtotal of additional charges plus base price
+         private void subTotal()
+         {
+            double basePrice = Convert.ToDouble(basePriceTextBox.Text);
+            double totalAdditionalCharges = Convert.ToDouble(additionalOptionsTextBox.Text);
+            double subTotal = basePrice + totalAdditionalCharges;
+
+            subtotalTextBox.Text = subTotal.ToString("C2");
+         }
+
+        //calculate the sales tax
+        private void salesTaxes()
+        {
+            double taxes = Convert.ToDouble(subtotalTextBox.Text) * .13;
+            salesTaxTextBox.Text = taxes.ToString("C2");
+        }
+         //multiply the subtotal by 1.13 to include taxes in the cost
+         private void Total()
+         {
+            double subTotal = Convert.ToDouble(subtotalTextBox.Text);
+            double total = subTotal * 1.13;
+           
+            totalTextBox.Text = total.ToString("C2");
+         }
+
+         private void AmountDue()
+         {
+             double subTotal = Convert.ToDouble(subtotalTextBox.Text);
+             double tradeInAllowance = Convert.ToDouble(tradeInAllowanceTextBox.Text);
+             double amountDue = subTotal - tradeInAllowance;
+
+             amountDueTextBox.Text = amountDue.ToString("C2");
+          }
+
+          private void calculateButton_Click(object sender, EventArgs e)
+          {
+             if (subtotalTextBox.Text != "")
+            {
+                AmountDue();
+            }
+        }
     }
 }
+
